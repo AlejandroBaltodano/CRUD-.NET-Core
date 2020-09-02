@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CRUD_CORE.UI.Models.Modelos.Persona>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a mi crud con .Net Core</h1>
+
+    <h2 class="display-4">Lista de personas</h2>
+
+</div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPersona">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdPersona">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPersona">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

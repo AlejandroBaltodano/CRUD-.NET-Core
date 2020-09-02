@@ -54,7 +54,7 @@ namespace CRUD_CORE.UI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Persona}/{action=Index}/{id?}");
             });
         }
     }
