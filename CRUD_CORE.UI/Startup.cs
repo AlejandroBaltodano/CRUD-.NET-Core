@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using CRUD_CORE.UI.Models.Context;
 
 namespace CRUD_CORE.UI
 {
@@ -23,6 +26,11 @@ namespace CRUD_CORE.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<Context>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("ConectorBD")));
+            
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
