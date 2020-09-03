@@ -13,12 +13,14 @@ namespace CRUD_CORE.UI.Models.Modelos
         [Key]
         public int IdPersona { get; set; }
         [Column(TypeName = "nvarchar(150)")]
-        [Required]
+        [Required(ErrorMessage ="This field Nombre is required")]
         public string Nombre { get; set; }
         [Column(TypeName = "nvarchar(50)")]
-        [Required]
+        [Required(ErrorMessage = "This field Cedula is required")]
         public string Cedula { get; set; }
         [Column(TypeName = "date")]
+        [Display(Name ="Fecha nacimiento")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd }", ApplyFormatInEditMode = true)]
         public DateTime? FechaNacimiento { get; set; }
 
     }

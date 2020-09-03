@@ -168,8 +168,6 @@ C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\bin\Debug\netcoreapp3.1\zh-H
 C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\CRUD_CORE.UI.csproj.CoreCompileInputs.cache
 C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\CRUD_CORE.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\Razor\Views\Persona\Create.cshtml.g.cs
-C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\Razor\Views\Persona\Delete.cshtml.g.cs
 C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\Razor\Views\Persona\Details.cshtml.g.cs
 C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\Razor\Views\Persona\Edit.cshtml.g.cs
 C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\Razor\Views\Persona\Index.cshtml.g.cs
-C:\Users\Creyes\source\repos\CRUD_CORE\CRUD_CORE.UI\obj\Debug\netcoreapp3.1\CRUD_CORE.UI.csprojAssemblyReference.cache

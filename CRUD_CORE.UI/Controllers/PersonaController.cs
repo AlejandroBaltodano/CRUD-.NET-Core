@@ -59,8 +59,12 @@ namespace CRUD_CORE.UI.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(persona);
+                _context.Entry(persona).State = EntityState.Added;
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+
+                
+
             }
             return View(persona);
         }
@@ -119,31 +123,15 @@ namespace CRUD_CORE.UI.Controllers
         // GET: Persona/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+                var persona = await _context.Personas.FindAsync(id);
+                _context.Personas.Remove(persona);
+                await _context.SaveChangesAsync();
 
-            var persona = await _context.Personas
-                .FirstOrDefaultAsync(m => m.IdPersona == id);
-            if (persona == null)
-            {
-                return NotFound();
-            }
+                return RedirectToAction(nameof(Index));
 
-            return View(persona);
+            
         }
 
-        // POST: Persona/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var persona = await _context.Personas.FindAsync(id);
-            _context.Personas.Remove(persona);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
 
         private bool PersonaExists(int id)
         {
